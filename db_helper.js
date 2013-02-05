@@ -32,6 +32,17 @@ exports.deleteTables = function() {
 	});
 };
 
+exports.insertTestData = function() {
+	var params = credentials.connectionParams;
+	params.multipleStatements = true;
+	var connection = mysql.createConnection(params);
+	connection.connect(handler);
+	files.readFile("./test_data.sql", "ascii", function(err, data) {
+		handler(err);
+		connection.query(data, handler);
+		console.log("Successfully inserted test data");
+	});
+};
 
 exports.createDB = function() {
 	var connection = mysql.createConnection(credentials.rootConnectionParams);
