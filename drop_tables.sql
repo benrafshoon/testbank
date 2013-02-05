@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS person;
+DROP TABLE IF EXISTS major;
+DROP TABLE IF EXISTS department;
+DROP TABLE IF EXISTS course;
+DROP TABLE IF EXISTS professor;
+DROP TABLE IF EXISTS person_major;
+DROP TABLE IF EXISTS course_professor;
+DROP TABLE IF EXISTS test_person;
+DROP TABLE IF EXISTS course_professor_person;
